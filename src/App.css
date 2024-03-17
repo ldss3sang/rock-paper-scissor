@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 5s;
+}
+
+.logo {
+  width: 300px;
+  height: 100px;
+}
+
+.game-title {
+  color: gold;
+  text-shadow: 2px 0 steelblue, -2px 0 steelblue, 0 2px steelblue,
+    0 -2px steelblue, 1px 1px steelblue, -1px -1px steelblue, 1px -1px steelblue,
+    -1px 1px steelblue;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.username {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+}
+
+.pokeball-button {
+  border: none;
+  background: none;
+  transition: transform 0.2s;
+}
+
+.pokeball-button:active {
+  transform: scale(0.9);
+}
+
+.pokeball-image {
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+}
+
+.game-screen {
+  display: flex;
+  flex-direction: column;
+  animation: show 3s;
+}
+
+@keyframes show {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pokeball {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+      white 16px,
+      black 17px 18px,
+      white 19px 24px,
+      black 25px 32px,
+      transparent 33px
+    ),
+    linear-gradient(to bottom, red 0 145px, black 80px 160px, white 97px 100%);
+  border-radius: 50%;
+  border: 8px solid black;
+  box-shadow: inset -16px -8px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.item-img {
+  width: 230px;
+  padding: 0;
+  margin: 0;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+}
+
+.item-name {
+  position: absolute;
+  bottom: 60px;
+  opacity: 0.6;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-style: italic;
+  font-size: 70px;
+  color: white;
+}
+
+.main,
+.buttons {
+  display: flex;
+  justify-content: center;
+}
