@@ -70,7 +70,7 @@ function App() {
   return (
     <div className="container">
       <img className="logo" src={PokemonLogo} alt="pokemonlogo" />
-      <h1 className="game-title">Rock Paper Scissor</h1>
+      <div className="game-title">Rock👊 Paper✋ Scissor✌️</div>
       {start ? (
         username ? (
           <div className="game-screen">
@@ -79,9 +79,15 @@ function App() {
               <Box title="Computer" item={computerSelect} />
             </section>
             <section className="buttons">
-              <button onClick={() => play("scissor")}>가위</button>
-              <button onClick={() => play("rock")}>바위</button>
-              <button onClick={() => play("paper")}>보</button>
+              <button className="play-button" onClick={() => play("rock")}>
+                👊
+              </button>
+              <button className="play-button" onClick={() => play("paper")}>
+                ✋
+              </button>
+              <button className="play-button" onClick={() => play("scissor")}>
+                ✌️
+              </button>
             </section>
           </div>
         ) : (
@@ -92,13 +98,14 @@ function App() {
               placeholder="Please Enter your name"
             />
             <button className="pokeball-button" type="submit">
-              <img className="pokeball-image" src={Pokeball} />
+              <img className="pokeball-image" src={Pokeball} alt="pokeball" />
             </button>
           </form>
         )
       ) : (
         <button className="start-button" onClick={gameStart} type="button">
-          Game Start
+          <img className="pokeball-image" src={Pokeball} alt="pokeball" />
+          <div>Click</div>
         </button>
       )}
     </div>

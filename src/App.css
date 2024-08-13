@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   transition: all 5s;
 }
@@ -12,10 +12,13 @@
 }
 
 .game-title {
+  font-family: "Pokemon Solid", sans-serif;
+  font-size: 30px;
   color: gold;
   text-shadow: 2px 0 steelblue, -2px 0 steelblue, 0 2px steelblue,
     0 -2px steelblue, 1px 1px steelblue, -1px -1px steelblue, 1px -1px steelblue,
     -1px 1px steelblue;
+  letter-spacing: 5px;
 }
 
 form {
@@ -24,17 +27,25 @@ form {
   align-items: center;
 }
 
+@keyframes underline {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .username {
   border: none;
   border-bottom: 1px solid black;
   outline: none;
   background: transparent;
   font-size: 20px;
+  animation: underline 0.5s ease-in-out;
 }
 
 .pokeball-button {
-  border: none;
-  background: none;
   transition: transform 0.2s;
 }
 
@@ -71,6 +82,16 @@ form {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.title {
+  font-family: "Pokemon Solid", sans-serif;
+  font-size: 25px;
+  color: gold;
+  text-shadow: 2px 0 steelblue, -2px 0 steelblue, 0 2px steelblue,
+    0 -2px steelblue, 1px 1px steelblue, -1px -1px steelblue, 1px -1px steelblue,
+    -1px 1px steelblue;
+  letter-spacing: 5px;
 }
 
 .pokeball {
@@ -113,4 +134,15 @@ form {
 .buttons {
   display: flex;
   justify-content: center;
+}
+
+.play-button {
+  font-size: 50px;
+  text-shadow: 2px 0 steelblue, -2px 0 steelblue, 0 2px steelblue,
+    0 -2px steelblue, 1px 1px steelblue, -1px -1px steelblue, 1px -1px steelblue,
+    -1px 1px steelblue;
+}
+
+.play-button:active {
+  transform: scale(0.8);
 }

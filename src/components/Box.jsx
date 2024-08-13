@@ -8,7 +8,7 @@ export const Box = ({ title, item }) => {
   }
   return (
     <div className="box">
-      <h1 className="title">{title}</h1>
+      <div className="title">{title}</div>
       <div className="pokeball">
         {item && <img className="item-img" src={item.image} alt="ditto" />}
         <div className="item-name">{item?.name}</div>
